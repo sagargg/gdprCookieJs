@@ -10,16 +10,17 @@ A custom javascript code that displays a GDPR-compliant cookie consent UI. It is
 3. Import [js resource ](https://github.com/sagargg/gdprCookieJs/blob/master/cookie.js) into you're code base.
 4. Hold the cookie being added from the third party apps or js script  `type="text/plain"` and also provide cookie type `data-cookie-type="analytics"`. 
 5. You can specify own cookie type in cookies object like `necessary`, `functional` etc. See the example below. 
-```
+```javascript 
 <script type="text/plain" data-cookie-type="analytics">
-		document.getElementById('ga-gtag').src = 'https://www.googletagmanager.com/gtag/js?id=UA-164233680-1'
-		window.dataLayer = window.dataLayer || []
-		function gtag() {
-			dataLayer.push(arguments)
-		}
-		gtag('js', new Date())
-		gtag('config', 'UA-164233680-1')
-	</script>
+  document.getElementById('ga-gtag').src = 'https://www.googletagmanager.com/gtag/js?id=UA-164233680-1'
+  window.dataLayer = window.dataLayer || []
+	function gtag() {
+		dataLayer.push(arguments)
+	}
+	gtag('js', new Date())
+	gtag('config', 'UA-164233680-1')
+	
+</script>
 ```
 6. Create cookie object with reqired information
 
