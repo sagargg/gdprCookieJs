@@ -1,0 +1,269 @@
+.ckc-container {
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 9999999;
+    bottom: 0;
+    left: 0;
+}
+
+.ckc-consent-bar {
+    border: 1px solid;
+    padding: 16.5px 24px;
+    box-shadow: 0 -1px 10px 0 #acabab4d;
+    border-color: #f4f4f4;
+    background-color: #FFFFFF;
+}
+
+.ckc-conset-notice .ckc-title {
+    color: #212121;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 10px 0;
+}
+
+.ckc-conset-notice .ckc-notes {
+    color: #212121;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.ckc-buttons {
+    font-size: 14px;
+    font-family: inherit;
+    line-height: 24px;
+    font-weight: 900;
+    margin-right: 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+
+.ckc-buttons .ckc-button-accept {
+    color: #1863dc;
+    background: transparent;
+    border: 2px solid;
+    border-color: #1863dc;
+    padding: 8px 28px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.ckc-buttons .ckc-button-customize {
+    color: #1863dc;
+    background: transparent;
+    border: 2px solid;
+    border-color: #1863dc;
+    padding: 8px 28px 8px 14px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.ckc-buttons .ckc-button-customize::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    top: 13px;
+    right: 12px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid;
+    border-top-color: inherit;
+}
+
+.ckc-buttons .ckc-button-policy {
+    color: #FFFFFF;
+    border: 2px solid;
+    border-color: #1863dc;
+    background-color: #1863dc;
+    padding: 8px 28px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+@keyframes fade-up {
+    0% {
+        height: 0px;
+    }
+
+    20.99999% {
+        height: 53vh;
+    }
+}
+
+.ckc-preference-container {
+    color: #212121;
+    border-color: #F4F4F4;
+    background-color: #FFFFFF;
+    transition: all 2s linear;
+    height: 0;
+}
+
+
+.ckc-preference-show {
+    height: auto;
+    animation-name: fade-up;
+    animation-duration: 4s;
+}
+
+.ckc-preference {
+    padding: 10px 24px;
+    color: #212121;
+    overflow-y: scroll;
+    max-height: 48vh;
+}
+
+.ckc-accordion-item {
+    position: relative;
+    color: #212121;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.ckc-accordion-panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.ckc-preference-slider {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.ckc-preference-slider input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.ckc-preference-slider span {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.ckc-preference-slider span:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    border-radius: 50%;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.ckc-preference-slider input:checked+span {
+    background-color: #2196F3;
+}
+
+
+.ckc-preference-slider input:focus+span {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.ckc-preference-slider input:checked+span:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+.ckc-accordion-header:before {
+    border-style: solid;
+    position: absolute;
+    border-width: 0.10em 0.10em 0 0;
+    content: "";
+    display: inline-block;
+    height: 0.5em;
+    left: -4px;
+    transform: rotate(-225deg);
+    margin-top: 10px;
+    width: 0.5em;
+}
+
+.ckc-accordion-header p {
+    margin: 0;
+    padding: 0;
+}
+
+.ckc-accordion-header.active:before {
+    content: "";
+    transform: rotate(-45deg);
+}
+
+.ckc-accordion-title {
+    padding: 0 2px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+.ckc-accordion-title h3 {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.ckc-preference-save {
+    padding: 20px;
+    border-top: 1px solid #F4F4F4;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ckc-preference-save-btn {
+    color: #1863dc;
+    background: transparent;
+    border: 2px solid;
+    border-color: #1863dc;
+    padding: 8px 28px;
+    position: relative;
+    cursor: pointer;
+}
+
+.ckc-cookie-table {
+    padding-top: 20px;
+}
+
+.ckc-cookie-table thead {
+    background: #d4d4d4;
+}
+
+.ckc-cookie-table thead tr th {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.ckc-cookie-table tbody {
+    background: #eaeaea;
+}
+
+.ckc-cookie-table tbody tr td {
+    padding: 10px;
+    font-size: 14px;
+}

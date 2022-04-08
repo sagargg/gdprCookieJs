@@ -1,0 +1,105 @@
+<html>
+<head>
+	<link rel="stylesheet" href="cookie.css">
+	<script type="text/text" id="ga-gtag" data-cookie-type="analytics"
+		src="https://www.googletagmanager.com/gtag/js?id=UA-154803630-1" async></script>
+	<script type="text/text" data-cookie-type="analytics">
+		document.getElementById('ga-gtag').src = 'https://www.googletagmanager.com/gtag/js?id=UA-154803680-1'
+		window.dataLayer = window.dataLayer || []
+		function gtag() {
+			dataLayer.push(arguments)
+		}
+		gtag('js', new Date())
+		gtag('config', 'UA-154803680-1')
+	</script>
+</head>
+
+
+<body>
+	<h1>Welcome to the page</h1>
+</body>
+
+<section class="footer">
+	<div class="ckc-container">
+		<div class="ckc-consent-bar">
+			<div class="ckc-conset-notice">
+				<div class="ckc-title">This site uses cookies.</div>
+				<div class="ckc-notes">
+					<p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our
+						traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+				</div>
+
+				<div class="ckc-buttons">
+					<button class="ckc-button-accept">Accept All</button>
+					<button class="ckc-button-customize">Customize</button>
+					<a href="/mypolicy" class="ckc-button-policy"> Read Policy </a>
+				</div>
+			</div>
+		</div>
+		<div class="ckc-preference-container">
+			<div class="ckc-preference-center">
+				<div class="ckc-preference">
+					<div class="ckc-preference-header">
+						<h3 >Customize Consent Preferences</h3>
+					</div>
+					<div class="ckc-preference-body">
+						<div class="ckc-preference-content-wrapper">
+							<p>We use cookies to help you navigate efficiently and perform certain functions. You will find detailed
+								information about all cookies under each consent category below.</p>
+							<p>Some of these cookies are essential, while others help us to improve your experience by providing
+								insights into how the site is being used.</p>
+							<p>You can choose to enable or disable some or all of these cookies but disabling some of them may affect
+								your browsing experience.</p>
+						</div>
+						<div class="ckc-accordion-wrapper">
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="ckc-preference-save">
+				<button class="ckc-preference-save-btn">Accept Selected</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script src="cookie.js"></script>
+<script>
+	// Initilize cookie consent.
+	Cookies = [
+		{
+			type: 'necessary',
+			description: 'Necessary cookies enable core functionality such as security, network management, and accessibility.  \
+													You may disable these by changing your browser settings, but this may affect how the website functions.',
+			cookies: []
+		},
+		{
+			type: 'analytics',
+			description: 'Analytical cookies are used to understand how visitors interact with the website. These cookies help \
+													provide information on metrics such as the number of visitors, bounce rate, traffic source, etc',
+			cookies: [{
+				name: '_ga',
+				duration: '2 year',
+				description: 'The _ga cookie, installed by Google Analytics, calculates visitor, session and campaign data and also keeps track of site usage for the site\'s analytics report. The cookie stores information anonymously and assigns a randomly generated number to recognize unique visitors.'
+			},
+			{
+				name: '_gid',
+				duration: '1 year',
+				description: 'Installed by Google Analytics, _gid cookie stores information on how visitors use a website, while also creating an analytics report of the website\'s performance. Some of the data that are collected include the number of visitors, their source, and the pages they visit anonymously.'
+			},
+			{
+				name: '_gat_gtag_UA-154803630-1',
+				duration: '1 year',
+				description: 'A variation of the _gat cookie set by Google Analytics and Google Tag Manager to allow website owners to track visitor behaviour and measure site performance. The pattern element in the name contains the unique identity number of the account or website it relates to.'
+			}
+			]
+		},
+
+	]
+
+	var CKC = new CookiesConsent(Cookies)
+	CKC.init()
+</script>
+
+</html>
