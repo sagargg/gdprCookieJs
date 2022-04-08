@@ -61,7 +61,7 @@ Cookies = [{
 ]
 ```
 5. Instantiate and initilize cookie consent providing cookies infomation object.
-```
+``` javascript 
   var CKC = new CookiesConsent(Cookies)
   CKC.init()
 ```
